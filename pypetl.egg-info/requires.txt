@@ -1,5 +1,0 @@
-petl
-redshift-connector
-psycopg2-binary
-paramiko
-sshtunnel
