@@ -1,3 +1,5 @@
+from pypetl_canary.core import log
+
 def none2str(data, string = ''):
     if data == None:
         return string

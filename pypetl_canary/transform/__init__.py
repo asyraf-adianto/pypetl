@@ -1,3 +1,3 @@
 from __future__ import absolute_import
 
-from .convert import *
+from pypetl_canary.transform.convert import *

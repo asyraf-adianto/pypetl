@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
   
 setuptools.setup(
     name="pypetl-canary",
-    version="0.0.6",
+    version="0.0.10",
     author="asyraf-adianto",
     author_email="asyraf.adianto@gmail.com",
     packages=["pypetl_canary"],
@@ -14,7 +14,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/asyraf-adianto/pypetl",
     license='MIT',
-    python_requires='>=3.9',
+    python_requires='>=3.5',
     install_requires=[
         'petl',
         'redshift-connector',

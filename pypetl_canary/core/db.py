@@ -27,10 +27,7 @@ import redshift_connector as rc
 import psycopg2 as pg
 from operator import itemgetter
 
-try:
-    from . import log
-except ImportError:
-    import log
+from pypetl_canary.core import log
 
 # Global Variable
 session = {}

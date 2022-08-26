@@ -16,11 +16,8 @@
 
 import json
 
+from pypetl_canary.core import log
 
-try:
-    from . import log
-except ImportError:
-    import log
 
 
 def open_json(path, gap=""):

@@ -2,10 +2,8 @@ import paramiko
 from io import StringIO
 from sshtunnel import SSHTunnelForwarder
 
-try:
-    from . import log
-except ImportError:
-    import log
+from pypetl_canary.core import log
+
 
 session = {}
 remote_address = {}

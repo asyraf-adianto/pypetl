@@ -1,6 +1,6 @@
 import petl
 
-from ..core import db, log
+from pypetl_canary.core import db, log
 
 def fromDBSecret(alias, query, cache=False):
     fname = 'fromDBSecret'

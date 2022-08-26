@@ -20,10 +20,7 @@
 import boto3
 import json
 
-try:
-    from . import log
-except ImportError:
-    import log
+from pypetl_canary.core import log
 
 # Global Variable
 enabled = False
