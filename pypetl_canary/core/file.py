@@ -24,9 +24,5 @@ except ImportError:
 
 
 def open_json(path, gap=""):
-    fname = 'pypetl.core.file.open_json(%s)'%(path)
-    gap_new = gap+"   "
-    log.append('%s: Opening file...'%(fname), gap=gap_new)
     with open(path) as tmp:
-        log.append('%s: Opened!'%(fname), gap=gap_new)
         return json.load(tmp)

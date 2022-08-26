@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
   
 setuptools.setup(
     name="pypetl-canary",
-    version="0.0.3",
+    version="0.0.6",
     author="asyraf-adianto",
     author_email="asyraf.adianto@gmail.com",
-    packages=["pypetl"],
+    packages=["pypetl_canary"],
     description="Python ETL Tools",
     long_description=description,
     long_description_content_type="text/markdown",
