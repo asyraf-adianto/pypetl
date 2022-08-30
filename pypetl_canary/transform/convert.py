@@ -37,3 +37,19 @@ def data2str(table):
             if type == 'bool':
                 table = table.convert(field, lambda rec: 'True' if rec == True else 'False')
     return table
+
+def table2str(table):
+    fields = table.fieldnames()
+    for field in fields:
+        for type in table.typeset(field): 
+            if type in ['datetime', 'date', 'time']:
+                table = table.convert(field, lambda rec: date2str(rec, 'null', '-', ' ', ':'))
+            if type == 'str':
+                table = table.convert(field, lambda rec: none2str(rec, 'null').replace("'", "`")[0:67]+'...' if len(none2str(rec, 'null').replace("'", "`")) >= 70 else none2str(rec, 'null').replace("'", "`"))
+            if type in ['int', 'Decimal']:
+                table = table.convert(field, lambda rec: str(none2str(rec, 'null')))
+            if type == 'NoneType':
+                table = table.convert(field, lambda rec: none2str(rec, 'null'))
+            if type == 'bool':
+                table = table.convert(field, lambda rec: 'True' if rec == True else 'False')
+    return table
