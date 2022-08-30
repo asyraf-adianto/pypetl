@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
   
 setup(
     name="pypetl",
-    version="1.0.3",
+    version="1.0.5",
     author="asyraf-adianto",
     author_email="asyraf.adianto@gmail.com",
     package_dir={'': '.'},
