@@ -24,6 +24,26 @@ def tunnel_enable():
     global tunnel
     tunnel['enabled'] = True
 
+def set_tunnel_credential(alias:str, host:str, port:int, username:str, password:str, rsa:bool, remote_host:list):
+    global tunnel
+    tunnel['credential'][alias] = {}
+    tunnel['credential'][alias][host] = host
+    tunnel['credential'][alias][port] = port
+    tunnel['credential'][alias][username] = username
+    tunnel['credential'][alias][password] = password
+    tunnel['credential'][alias][rsa] = rsa
+    tunnel['credential'][alias][remote_host] = remote_host
+
+def set_database_credential(alias:str, engine:str, host:str, port:int, username:str, password:str, dbname:str):
+    global database
+    database['credential'][alias] = {}
+    database['credential'][alias][engine] = engine
+    database['credential'][alias][host] = host
+    database['credential'][alias][port] = port
+    database['credential'][alias][username] = username
+    database['credential'][alias][password] = password
+    database['credential'][alias][dbname] = dbname
+
 def tunnel_disable():
     global tunnel
     tunnel['enabled'] = False

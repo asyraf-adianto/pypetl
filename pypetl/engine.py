@@ -24,8 +24,8 @@ def get_secret(configuration):
     return result
 
 def get_credential(configuration):
-    result_db = {}
-    result_tunnel = {}
+    result_db = config.database['credential']
+    result_tunnel = config.tunnel['credential']
     for alias_aws, secret_content in configuration.items():
         if secret_content['secret_string']['engine'] in ['postgres', 'redshift']:
             result_db[alias_aws] = {}
